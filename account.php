@@ -49,3 +49,42 @@ header('location: index.php');
           </div>
           </a>
   
+          <a href="notification.php">
+          <div class="grid-sidebar">
+            <div class="icon-sidebar-align position-relative">
+                <?php if ($notify_count > 0) { ?>
+              <i class="notify-count"><?php echo $notify_count; ?></i> 
+              <?php } ?>
+              <img
+                src="<?php echo BASE_URL . "/includes/icons/tweetnotif.png"; ?>"
+                alt=""
+                height="26.25px"
+                width="26.25px"
+              />
+            </div>
+  
+            <div class="wrapper-left-elements">
+              <a href="notification.php" style="margin-top: 4px"><strong>Notifications</strong></a>
+            </div>
+          </div>
+          </a>
+        
+            <a href="<?php echo BASE_URL . $user->username; ?>">
+          <div class="grid-sidebar">
+            <div class="icon-sidebar-align">
+              <img src="<?php echo BASE_URL . "/includes/icons/tweetprof.png"; ?>" alt="" height="26.25px" width="26.25px" />
+            </div>
+  
+            <div class="wrapper-left-elements">
+              <!-- <a href="/twitter/<?php echo $user->username; ?>"  style="margin-top: 4px"><strong>Profile</strong></a> -->
+              <a  href="<?php echo BASE_URL . $user->username; ?>"  style="margin-top: 4px"><strong>Profile</strong></a>
+            
+            </div>
+          </div>
+          </a>
+          <a href="<?php echo BASE_URL . "account.php"; ?>">
+          <div class="grid-sidebar ">
+            <div class="icon-sidebar-align">
+              <img src="<?php echo BASE_URL . "/includes/icons/tweetsetting.png"; ?>" alt="" height="26.25px" width="26.25px" />
+            </div>
+  
