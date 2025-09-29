@@ -109,4 +109,74 @@ header('location: index.php');
           <button class="button-twittear">
             <strong>Tweet</strong>
           </button>
+          
+          <div class="box-user">
+            <div class="grid-user">
+              <div>
+                <img
+                  src="assets/images/users/<?php echo $user->img ?>"
+                  alt="user"
+                  class="img-user"
+                />
+              </div>
+              <div>
+                <p class="name"><strong><?php if($user->name !== null) {
+                echo $user->name; } ?></strong></p>
+                <p class="username">@<?php echo $user->username; ?></p>
+              </div>
+              <div class="mt-arrow">
+                <img
+                  src="https://i.ibb.co/mRLLwdW/arrow-down.png"
+                  alt=""
+                  height="18.75px"
+                  width="18.75px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+  
+
+      <div class="grid-posts">
+        <div class="border-right">
+          <div class="grid-toolbar-center">
+            <div class="center-input-search">
+              
+            </div>
+           
+          </div>
+
+          <div class="box-fixed" id="box-fixed"></div>
+  
+          <div class="box-home feed">
+               <div class="container">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a style="color:black !important;" class="nav-link active text-center" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Change Email or Username</a>
+                  <a style="color:black !important;" class="nav-link text-center" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Change Password</a>
+        
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <!-- Change EMAIL and USAERNAME Form -->
+
+                    <form method="POST" action="handle/handleAccountSetting.php" class="py-4" >
+                      
+                    <?php  if (isset($_SESSION['errors_account'] )) {
+                        
+                        ?>
+                              
+                        <?php foreach ($_SESSION['errors_account'] as $error) { ?>
+
+                            <div  class="alert alert-danger" role="alert">
+                                <p style="font-size: 15px;" class="text-center"> <?php echo $error ; ?> </p>  
+                            </div> 
+                                    <?php }   ?> 
+
+                        <?php }  unset($_SESSION['errors_account'])  ?>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" value="<?php echo $user->email; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    
   
