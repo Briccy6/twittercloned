@@ -52,4 +52,42 @@
 </div>
 
 
+
+                    </div>
+            </section>
+            <section class="twt-features">
+                <div class="features-div">
+                    <img class="twt-icon" src='https://image.ibb.co/bzvrkp/search_icon.png'>
+                    <p>Follow your interests.</p>
+                    <img class="twt-icon" src="https://image.ibb.co/mZPTWU/heart_icon.png">
+                    <p>Hear what people are talking about.</p>
+                    <img class="twt-icon" src="https://image.ibb.co/kw2Ad9/conv_icon.png">
+                    <p>Join the conversation.</p>
+                </div>
+            </section>
+            <footer>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Ads info</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li>© 2025 - Twitter Clone</li>
+                    <li style="color:#1DA1F2;"><b>- Developed By Alain Brian -</b></li>
+                </ul>
+            </footer>
+        </main>
+        
+        <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/mine.js"></script>
+</body>
+</html>
+
       
