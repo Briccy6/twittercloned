@@ -88,3 +88,25 @@ header('location: index.php');
               <img src="<?php echo BASE_URL . "/includes/icons/tweetsetting.png"; ?>" alt="" height="26.25px" width="26.25px" />
             </div>
   
+<div class="wrapper-left-elements">
+              <a class="wrapper-left-active" href="<?php echo BASE_URL . "account.php"; ?>" style="margin-top: 4px"><strong>Settings</strong></a>
+            </div>
+           
+            
+          </div>
+          </a>
+          <a href="includes/logout.php">
+          <div class="grid-sidebar">
+            <div class="icon-sidebar-align">
+            <i style="font-size: 26px;" class="fas fa-sign-out-alt"></i>
+            </div>
+  
+            <div class="wrapper-left-elements">
+              <a  href="includes/logout.php" style="margin-top: 4px"><strong>Logout</strong></a>
+            </div>
+          </div>
+          </a>
+          <button class="button-twittear">
+            <strong>Tweet</strong>
+          </button>
+  
