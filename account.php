@@ -178,5 +178,78 @@ header('location: index.php');
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" name="email" value="<?php echo $user->email; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                     </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Username</label>
+                        <input type="text" name="username" value="<?php echo $user->username; ?>" class="form-control" id="exampleInputPassword1" placeholder="Username">
+                      </div>
+                      
+                      <div class="text-center">
+
+                        <button type="submit" name="submit" class="btn btn-primary">Save Changes</button>
+                      </div>
+
+                    </form>
+
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                     
+  <!-- Change Password Form -->
+
+                    <form method="POST" action="handle/handleChangePassword.php" class="py-4" >
+                    <script src="assets/js/jquery-3.5.1.min.js"></script>
+                    <?php  if (isset($_SESSION['errors_password'] )) {
+                        
+                        ?>
+                        
+
+                         <script>  
+                                $(document).ready(function(){
+                            // Open modal on page load
+                            $("#v-pills-profile-tab").click();
+                    
+                          });
+                          </script>
+
+                        <?php foreach ($_SESSION['errors_password'] as $error) { ?>
+
+                            <div  class="alert alert-danger" role="alert">
+                                <p style="font-size: 15px;" class="text-center"> <?php echo $error ; ?> </p>  
+                            </div> 
+                                    <?php }   ?> 
+
+                        <?php }  unset($_SESSION['errors_password'])  ?>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Old Password</label>
+                        <input type="password" name="old_password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Old Password">
+                    
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">New Password</label>
+                        <input type="password" name="new_password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Verify Password</label>
+                        <input type="password" name="ver_password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+                      </div>
+                      
+                      <div class="text-center">
+
+                        <button type="submit" name="submit" class="btn btn-primary">Save Changes</button>
+                      </div>
+
+                    </form>
+
+                  </div>
+     
+                </div>
+                   
+               </div>
+           
+          </div>
+        </div>
+        <div> 
+            
   
