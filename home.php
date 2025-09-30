@@ -79,3 +79,36 @@
       <?php unset($_SESSION['welcome']); } ?>
 
       <!-- End welcome -->
+         <div id="mine">
+ 
+    <div class="wrapper-left">
+        <div class="sidebar-left">
+          <div class="grid-sidebar" style="margin-top: 12px">
+            <div class="icon-sidebar-align">
+              <img src="<?php echo BASE_URL . "/assets/images/twitter-logo.png"; ?>" alt="" height="30px" width="30px" />
+            </div>
+          </div>
+           <a href="home.php">
+          <div class="grid-sidebar bg-active" style="margin-top: 12px">
+            <div class="icon-sidebar-align">
+              <img src="<?php echo BASE_URL . "/includes/icons/tweethome.png"; ?>" alt="" height="26.25px" width="26.25px" />
+            </div>
+            <div class="wrapper-left-elements">
+              <a class="wrapper-left-active" href="home.php" style="margin-top: 4px;"><strong>Home</strong></a>
+            </div>
+          </div>
+          </a>
+           <a href="notification.php">
+          <div class="grid-sidebar">
+            <div class="icon-sidebar-align position-relative">
+                <?php if ($notify_count > 0) { ?>
+              <i class="notify-count"><?php echo $notify_count; ?></i> 
+              <?php } ?>
+              <img
+                src="<?php echo BASE_URL . "/includes/icons/tweetnotif.png"; ?>"
+                alt=""
+                height="26.25px"
+                width="26.25px"
+              />
+            </div>
+  
