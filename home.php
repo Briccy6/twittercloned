@@ -43,3 +43,39 @@
  
        });
       </script>
+            <!-- Modal -->
+<div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div  class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="">
+        <div class="text-center">
+         <span  class="modal-title font-weight-bold text-center" id="exampleModalLongTitle">
+          <span style="font-size: 20px;">Welcome <span style="color:#207ce5"><?php echo $user->name; ?></span>  </span>  
+         </span>
+        </div>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+       
+        <h4 style="font-weight: 600; " >You've Signed up Successfully!</h4>
+     </div>
+        <p>This is Twitter clone is developed by <span style="font-weight: 700;">Alain Brian</span>  for learning purpose.</p>
+        <p>The clone project includes tweet , retweet , quote or even quote the quoted tweet , like tweet and nested comments.
+          You can mention or add hashtag to yout tweet , change password or username.
+          Follow or unfollow people. get notificaction if any action happen. Search users by name or username. and more!
+        </p>
+        <p>By default you followed
+          <a style="color:#207ce5;" href="briccyit">@Briccyit</a> 
+            to see their tweets.</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+      <?php unset($_SESSION['welcome']); } ?>
+
+      <!-- End welcome -->
