@@ -30,3 +30,16 @@
    
 </head>
 <body>
+     <!-- This is a modal for welcome the new signup account! -->
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+     
+    <?php  if (isset($_SESSION['welcome'])) { ?>
+      <script>
+       $(document).ready(function(){
+        // Open modal on page load
+        $("#welcome").modal('show');
+      
+ 
+       });
+      </script>
