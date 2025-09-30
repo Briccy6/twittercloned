@@ -30,3 +30,14 @@
    
 </head>
 <body>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+
+   
+    <div id="mine">
+    <div class="wrapper-left">
+        <div class="sidebar-left">
+          <div class="grid-sidebar" style="margin-top: 12px">
+            <div class="icon-sidebar-align">
+              <img src="<?php echo BASE_URL . "/assets/images/twitter-logo.png"; ?>" alt="" height="30px" width="30px" />
+            </div>
+          </div>
