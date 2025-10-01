@@ -51,3 +51,16 @@
             </div>
           </div>
           </a>
+           <a href="notification.php">
+          <div class="grid-sidebar">
+            <div class="icon-sidebar-align position-relative">
+                <?php if ($notify_count > 0) { ?>
+              <i class="notify-count"><?php echo $notify_count; ?></i> 
+              <?php } ?>
+              <img
+                src="<?php echo BASE_URL . "/includes/icons/tweetnotif.png"; ?>"
+                alt=""
+                height="26.25px"
+                width="26.25px"
+              />
+            </div>
