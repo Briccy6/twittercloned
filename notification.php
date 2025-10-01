@@ -149,4 +149,43 @@
           </div>
 
           <div class="box-fixed" id="box-fixed"></div>
-           
+           <div class="box-home feed">
+               <div class="container">
+                 <div style="border-bottom: 1px solid #F5F8FA;"  class="row position-fixed box-name">
+                       <div class="col-xs-2">
+                       <a href="javascript: history.go(-1);"> <i style="font-size:20px;" class="fas fa-arrow-left arrow-style"></i> </a>
+                       </div>
+                       <div class="col-xs-10">
+                           <p style="margin-top: 12px;" class="home-name"> Notifications</p>
+                      </div>
+                 </div>
+
+                 </div> 
+                 <div class="container mt-5">
+                      <?php foreach($notofication as $notify) { 
+                         $user = User::getData($notify->notify_from);
+                         $timeAgo = Tweet::getTimeAgo($notify->time);
+                         ?>
+                     <?php if ($notify->type == 'like') { 
+                        $icon = "<i style='color: red;font-size:30px;' class='fa-heart  fas ml-2'></i>";
+                        $msg = "Liked Your Tweet";
+                        } else if ($notify->type == 'retweet') { 
+                            $icon = "<i style='font-size:30px;color: rgb(22, 207, 22);'  class='fas fa-retweet ml-2'></i>";
+                            $msg = "Retweeted Your Tweet";
+                        } else if ($notify->type == 'qoute') { 
+                            $icon = "<i style='font-size:30px;color: rgb(22, 207, 22);'  class='fas fa-retweet ml-2'></i>";
+                            $msg = "Quoted Your Tweet";
+                        } else if ($notify->type == 'comment') { 
+                            $icon = "<i style='font-size:30px;' class='far fa-comment ml-2'></i>";
+                            $msg = "Comment to your Tweet";
+                        } else if ($notify->type == 'reply') { 
+                            $icon = "<i style='font-size:30px;' class='far fa-comment ml-2'></i>";
+                            $msg = "Reply to your Comment";
+                        } else if ($notify->type == 'follow') { 
+                            $icon = "<i style='font-size:30px;' class='fas fa-user ml-2'></i>";
+                            $msg = "Followed You";
+                        } else if ($notify->type == 'mention') { 
+                          $icon = "<i style='font-size:30px;' class='fas fa-user ml-2'></i>";
+                          $msg = "Mention you in Tweet";
+                        }?>
+                      
