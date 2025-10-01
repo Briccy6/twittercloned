@@ -64,3 +64,78 @@
                 width="26.25px"
               />
             </div>
+           
+            <div class="wrapper-left-elements">
+              <a class="wrapper-left-active" href="notification.php" style="margin-top: 4px"><strong>Notifications</strong></a>
+            </div>
+          </div>
+          </a>
+        
+            <a href="<?php echo BASE_URL . $user->username; ?>">
+          <div class="grid-sidebar">
+            <div class="icon-sidebar-align">
+              <img src="<?php echo BASE_URL . "/includes/icons/tweetprof.png"; ?>" alt="" height="26.25px" width="26.25px" />
+            </div>
+  
+            <div class="wrapper-left-elements">
+              <!-- <a href="/twitter/<?php echo $user->username; ?>"  style="margin-top: 4px"><strong>Profile</strong></a> -->
+              <a  href="<?php echo BASE_URL . $user->username; ?>"  style="margin-top: 4px"><strong>Profile</strong></a>
+            
+            </div>
+          </div>
+          </a>
+          <a href="<?php echo BASE_URL . "account.php"; ?>">
+          <div class="grid-sidebar ">
+            <div class="icon-sidebar-align">
+              <img src="<?php echo BASE_URL . "/includes/icons/tweetsetting.png"; ?>" alt="" height="26.25px" width="26.25px" />
+            </div>
+  
+            <div class="wrapper-left-elements">
+              <a href="<?php echo BASE_URL . "account.php"; ?>" style="margin-top: 4px"><strong>Settings</strong></a>
+            </div>
+           
+            
+          </div>
+          </a>
+          <a href="includes/logout.php">
+          <div class="grid-sidebar">
+            <div class="icon-sidebar-align">
+            <i style="font-size: 26px;" class="fas fa-sign-out-alt"></i>
+            </div>
+  
+            <div class="wrapper-left-elements">
+              <a href="includes/logout.php" style="margin-top: 4px"><strong>Logout</strong></a>
+            </div>
+          </div>
+          </a>
+          <button class="button-twittear">
+            <strong>Tweet</strong>
+          </button>
+  
+          <div class="box-user">
+            <div class="grid-user">
+              <div>
+                <img
+                  src="assets/images/users/<?php echo $user->img ?>"
+                  alt="user"
+                  class="img-user"
+                />
+              </div>
+              <div>
+                <p class="name"><strong><?php if($user->name !== null) {
+                echo $user->name; } ?></strong></p>
+                <p class="username">@<?php echo $user->username; ?></p>
+              </div>
+              <div class="mt-arrow">
+                <img
+                  src="https://i.ibb.co/mRLLwdW/arrow-down.png"
+                  alt=""
+                  height="18.75px"
+                  width="18.75px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+           
