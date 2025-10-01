@@ -138,4 +138,15 @@
           </div>
         </div>
       </div>
+      
+      <div class="grid-posts">
+        <div class="border-right">
+          <div class="grid-toolbar-center">
+            <div class="center-input-search">
+              
+            </div>
+           
+          </div>
+
+          <div class="box-fixed" id="box-fixed"></div>
            
