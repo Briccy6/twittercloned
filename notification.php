@@ -188,4 +188,133 @@
                           $icon = "<i style='font-size:30px;' class='fas fa-user ml-2'></i>";
                           $msg = "Mention you in Tweet";
                         }?>
-                      
+                       <div style="position: relative; border-bottom:4px solid #F5F8FA;" class="box-tweet py-3 ">
+                        <a href="
+                        <?php if ($notify->type == 'follow'){ 
+                            echo $user->username;
+                        } else { ?>
+                            status/<?php echo $notify->target; ?>
+                        <?php } ?>  ">
+                        <span style="position:absolute; width:100%; height:100%; top:0;left: 0; z-index: 1;"></span>
+                        </a>
+                            <div class="grid-tweet">
+                                <div class="icon mt-2">
+                                    <?php echo $icon; ?>
+                                </div>
+                                <div class="notify-user">
+                                    <p>
+                                    <a style="position: relative; z-index:1000;" href="<?php echo $user->username;  ?>">
+                                        <img class="img-user" src="assets/images/users/<?php echo $user->img ?>" alt="">
+                                    </a> 
+                                    
+                                    </p>
+                                    <p> <a style="font-weight: 700;
+                                    font-size:18px;
+                                    position: relative; z-index:1000;" href="<?php echo $user->username; ?>">
+                                    <?php echo $user->name; ?> </a> <?php echo $msg; ?> 
+                                    <span style="font-weight: 500;" class="ml-3">
+                                      <?php echo $timeAgo; ?>
+                                    </span> 
+                                  </p>
+                                </div>
+                            </div>
+                        </div> 
+                     <?php  } ?> 
+                 </div>
+                
+               
+        
+        </div>
+        </div> 
+
+        <div class="wrapper-right">
+            <div style="width: 90%;" class="container">
+
+            <div class="input-group py-2 m-auto pr-5 position-relative">
+
+            <i id="icon-search" class="fas fa-search tryy"></i>
+            <input type="text" class="form-control search-input"  placeholder="Search Twitter">
+            <div class="search-result">
+
+
+            </div>
+            </div>
+            </div>
+
+
+
+            <div class="box-share">
+            <p class="txt-share"><strong>Who to follow</strong></p>
+            <?php 
+            foreach($who_users as $user) { 
+              //  $u = User::getData($user->user_id);
+               $user_follow = Follow::isUserFollow($user_id , $user->id) ;
+               ?>
+          <div class="grid-share">
+          <a style="position: relative; z-index:5; color:black" href="<?php echo $user->username;  ?>">
+                      <img
+                        src="assets/images/users/<?php echo $user->img; ?>"
+                        alt=""
+                        class="img-share"
+                      />
+                    </a>
+                    <div>
+                      <p>
+                      <a style="position: relative; z-index:5; color:black" href="<?php echo $user->username;  ?>">  
+                      <strong><?php echo $user->name; ?></strong>
+                      </a>
+                    </p>
+                      <p class="username">@<?php echo $user->username; ?>
+                      <?php if (Follow::FollowsYou($user->id , $user_id)) { ?>
+                  <span class="ml-1 follows-you">Follows You</span></p>
+                  <?php } ?></p></p>
+                    </div>
+                    <div>
+                      <button class="follow-btn follow-btn-m 
+                      <?= $user_follow ? 'following' : 'follow' ?>"
+                      data-follow="<?php echo $user->id; ?>"
+                      data-user="<?php echo $user_id; ?>"
+                      data-profile="<?php echo $profileData->id; ?>"
+                      style="font-weight: 700;">
+                      <?php if($user_follow) { ?>
+                        Following 
+                      <?php } else {  ?>  
+                          Follow
+                        <?php }  ?> 
+                      </button>
+                    </div>
+                  </div>
+
+                  <?php }?>
+         
+          
+          </div>
+  
+  
+        </div>
+      </div> </div>
+      
+           <script src="assets/js/search.js"></script>
+            <script src="assets/js/photo.js"></script>
+            <script src="assets/js/follow.js?v=<?php echo time(); ?>"></script>
+            <script src="assets/js/users.js?v=<?php echo time(); ?>"></script>
+            <script type="text/javascript" src="assets/js/hashtag.js"></script>
+          <script type="text/javascript" src="assets/js/like.js"></script>
+          <script type="text/javascript" src="assets/js/comment.js?v=<?php echo time(); ?>"></script>
+          <script type="text/javascript" src="assets/js/retweet.js?v=<?php echo time(); ?>"></script>
+      <script src="https://kit.fontawesome.com/38e12cc51b.js" crossorigin="anonymous"></script>
+      <!-- <script src="assets/js/jquery-3.4.1.slim.min.js"></script> -->
+      <script src="assets/js/jquery-3.5.1.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+<style>
+
+  .container {
+    padding-left: 55px;
+  }
+
+</style>
+
+</html>
